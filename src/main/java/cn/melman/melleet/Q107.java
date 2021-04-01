@@ -1,15 +1,14 @@
 package cn.melman.melleet;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public class Q102 {
+public class Q107 {
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> res = new ArrayList<>();
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
         if (root == null) {
-            return res;
+            return new ArrayList<>();
         }
+        List<List<Integer>> res = new ArrayList<>();
         List<Integer> rootList = new ArrayList<>();
         rootList.add(root.val);
         res.add(rootList);
@@ -23,7 +22,7 @@ public class Q102 {
                 list.add(leaf.val);
                 append(children, leaf);
             }
-            res.add(list);
+            res.add(0,list);
             leafs = children;
         }
         return res;
