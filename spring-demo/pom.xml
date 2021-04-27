@@ -130,6 +130,17 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+
+        <!--aliyun start-->
+
+        <dependency>
+            <groupId>com.aliyun.odps</groupId>
+            <artifactId>odps-sdk-mapred</artifactId>
+            <version>0.26.2-public</version>
+        </dependency>
+        <!--aliyun end-->
+
     </dependencies>
 
     <dependencyManagement>
